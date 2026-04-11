@@ -334,6 +334,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con pollo',
     price: 90,
     category: 'tepanyaki',
+    image: '/platillos/tempayaki_pollo_plancha.png',
     sizes: [
       { label: 'Medio', price: 90 },
       { label: 'Completo', price: 120 },
