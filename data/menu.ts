@@ -346,6 +346,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con camarón',
     price: 100,
     category: 'tepanyaki',
+    image: '/platillos/tempayaki_camaron.png',
     sizes: [
       { label: 'Medio', price: 100 },
       { label: 'Completo', price: 130 },
