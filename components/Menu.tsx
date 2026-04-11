@@ -3,14 +3,82 @@
 import { useState } from 'react';
 import { menuItems, categories, note } from '@/data/menu';
 import { useCart } from '@/context/CartContext';
-import { Plus, Minus, ShoppingCart } from 'lucide-react';
+import { Plus, Minus, ShoppingCart, X } from 'lucide-react';
+
+// Rice options modal
+function RiceModal({ product, onClose, onConfirm }: {
+  product: (typeof menuItems)[0];
+  onClose: () => void;
+  onConfirm: (rice: string) => void;
+}) {
+  const [selected, setSelected] = useState<string>('gohan');
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div className="relative bg-dark-800 border border-dark-600/40 rounded-2xl p-6 w-full max-w-sm" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-bold text-white">¿Con qué arroz?</h3>
+          <button onClick={onClose} className="text-dark-400 hover:text-white"><X size={20} /></button>
+        </div>
+        <p className="text-sm text-dark-400 mb-4">{product.name}</p>
+        <div className="space-y-3">
+          {[
+            { id: 'gohan', label: 'Gohan', desc: 'Arroz blanco japonés' },
+            { id: 'yakimeshi', label: 'Yakimeshi', desc: 'Arroz frito con verduras' },
+            { id: 'sin', label: 'Sin arroz', desc: 'Solo verduras y proteína' },
+          ].map((opt) => (
+            <button
+              key={opt.id}
+              onClick={() => setSelected(opt.id)}
+              className={`w-full text-left p-4 rounded-xl border transition-all ${
+                selected === opt.id
+                  ? 'border-dragon-500/50 bg-dragon-500/10'
+                  : 'border-dark-600/30 bg-dark-700/50 hover:border-dark-500/50'
+              }`}
+            >
+              <div className="font-semibold text-white">{opt.label}</div>
+              <div className="text-xs text-dark-400">{opt.desc}</div>
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={() => onConfirm(selected)}
+          className="w-full mt-4 py-3 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-bold hover:scale-105 transition-all active:scale-95"
+        >
+          Confirmar y Agregar
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState<string>('sushi-clasico');
   const { addToCart } = useCart();
+  const [riceModal, setRiceModal] = useState<(typeof menuItems)[0] | null>(null);
 
   const filtered = menuItems.filter((p) => p.category === activeCategory);
   const currentCat = categories.find((c) => c.id === activeCategory);
+
+  const handleAdd = (product: (typeof menuItems)[0]) => {
+    if (product.category === 'tepanyaki') {
+      setRiceModal(product);
+    } else {
+      onAdd(product);
+    }
+  };
+
+  const onAdd = (product: (typeof menuItems)[0], rice?: string) => {
+    const name = rice ? `${product.name} (${rice})` : product.name;
+    addToCart(product.id + (rice ? rice.length : 0), name, getPrice(product));
+  };
+
+  const getPrice = (product: (typeof menuItems)[0]) => {
+    if (product.proteinOptions) return product.proteinOptions[0].price;
+    if (product.sizes) return product.sizes[0].price;
+    return product.price;
+  };
 
   return (
     <section id="menu" className="relative py-24 md:py-32 bg-dark-900 overflow-hidden">
@@ -62,68 +130,61 @@ export default function Menu() {
         {/* Products grid */}
         <div className="menu-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((product) => (
-            <MenuCard key={product.id} product={product} onAdd={addToCart} />
+            <div key={product.id} className="menu-card group bg-dark-800/60 border border-dark-600/30 rounded-2xl overflow-hidden hover:border-dragon-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-dragon-500/5 hover:-translate-y-1">
+              <div className="p-5 pb-3">
+                <div className="flex items-start justify-between gap-3">
+                  <h4 className="text-base font-bold text-white leading-tight">{product.name}</h4>
+                  {product.price === 0 && (
+                    <span className="px-2 py-1 bg-fire-500/20 text-fire-400 text-[10px] font-bold rounded-lg">A COTIZAR</span>
+                  )}
+                </div>
+                <p className="text-xs text-dark-400 mt-2 line-clamp-2">{product.description}</p>
+              </div>
+
+              {(product.proteinOptions || product.sizes) && (
+                <div className="px-5 pb-3">
+                  <div className="flex flex-wrap gap-1.5">
+                    {(product.proteinOptions || product.sizes || []).map((opt: any, i: number) => (
+                      <button
+                        key={i}
+                        onClick={() => {}}
+                        className="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-dark-700/50 text-dark-400 border border-dark-600/20 hover:border-dark-500/40"
+                      >
+                        {opt.label} ${opt.price}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="px-5 py-4 border-t border-dark-600/20 flex items-center justify-between">
+                <span className="text-xl font-black text-white">
+                  ${product.proteinOptions ? product.proteinOptions[0].price : product.sizes ? product.sizes[0].price : product.price}
+                </span>
+                <button
+                  onClick={() => handleAdd(product)}
+                  className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-dragon-500/30 transition-all hover:scale-105 active:scale-95"
+                >
+                  <ShoppingCart size={14} />
+                  Agregar
+                </button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-    </section>
-  );
-}
 
-function MenuCard({ product, onAdd }: { product: (typeof menuItems)[0]; onAdd: (id: number, name: string, price: number) => void }) {
-  const [selectedOption, setSelectedOption] = useState(0);
-
-  const getPrice = () => {
-    if (product.proteinOptions) return product.proteinOptions[selectedOption].price;
-    if (product.sizes) return product.sizes[0].price;
-    return product.price;
-  };
-
-  return (
-    <div className="menu-card group bg-dark-800/60 border border-dark-600/30 rounded-2xl overflow-hidden hover:border-dragon-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-dragon-500/5 hover:-translate-y-1">
-      {/* Header */}
-      <div className="p-5 pb-3">
-        <div className="flex items-start justify-between gap-3">
-          <h4 className="text-base font-bold text-white leading-tight">{product.name}</h4>
-          {product.price === 0 && (
-            <span className="px-2 py-1 bg-fire-500/20 text-fire-400 text-[10px] font-bold rounded-lg">A COTIZAR</span>
-          )}
-        </div>
-        <p className="text-xs text-dark-400 mt-2 line-clamp-2">{product.description}</p>
-      </div>
-
-      {/* Options */}
-      {(product.proteinOptions || product.sizes) && (
-        <div className="px-5 pb-3">
-          <div className="flex flex-wrap gap-1.5">
-            {(product.proteinOptions || product.sizes || []).map((opt: any, i: number) => (
-              <button
-                key={i}
-                onClick={() => setSelectedOption(i)}
-                className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-all ${
-                  selectedOption === i
-                    ? 'bg-dragon-500/20 text-dragon-400 border border-dragon-500/30'
-                    : 'bg-dark-700/50 text-dark-400 border border-dark-600/20 hover:border-dark-500/40'
-                }`}
-              >
-                {opt.label} ${opt.price}
-              </button>
-            ))}
-          </div>
-        </div>
+      {/* Rice modal */}
+      {riceModal && (
+        <RiceModal
+          product={riceModal}
+          onClose={() => setRiceModal(null)}
+          onConfirm={(rice) => {
+            onAdd(riceModal, rice);
+            setRiceModal(null);
+          }}
+        />
       )}
-
-      {/* Footer */}
-      <div className="px-5 py-4 border-t border-dark-600/20 flex items-center justify-between">
-        <span className="text-xl font-black text-white">${getPrice()}</span>
-        <button
-          onClick={() => onAdd(product.id, product.name, getPrice())}
-          className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-dragon-500/30 transition-all hover:scale-105 active:scale-95"
-        >
-          <ShoppingCart size={14} />
-          Agregar
-        </button>
-      </div>
-    </div>
+    </section>
   );
 }
