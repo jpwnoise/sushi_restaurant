@@ -130,44 +130,67 @@ export default function Menu() {
         {/* Products grid */}
         <div className="menu-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((product) => (
-            <div key={product.id} className="menu-card group bg-dark-800/60 border border-dark-600/30 rounded-2xl overflow-hidden hover:border-dragon-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-dragon-500/5 hover:-translate-y-1">
-              <div className="p-5 pb-3">
-                <div className="flex items-start justify-between gap-3">
-                  <h4 className="text-base font-bold text-white leading-tight">{product.name}</h4>
-                  {product.price === 0 && (
-                    <span className="px-2 py-1 bg-fire-500/20 text-fire-400 text-[10px] font-bold rounded-lg">A COTIZAR</span>
-                  )}
-                </div>
-                <p className="text-xs text-dark-400 mt-2 line-clamp-2">{product.description}</p>
-              </div>
-
-              {(product.proteinOptions || product.sizes) && (
-                <div className="px-5 pb-3">
-                  <div className="flex flex-wrap gap-1.5">
-                    {(product.proteinOptions || product.sizes || []).map((opt: any, i: number) => (
-                      <button
-                        key={i}
-                        onClick={() => {}}
-                        className="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-dark-700/50 text-dark-400 border border-dark-600/20 hover:border-dark-500/40"
-                      >
-                        {opt.label} ${opt.price}
-                      </button>
-                    ))}
+            <div
+              key={product.id}
+              className="menu-card group relative bg-dark-800/60 border border-dark-600/30 rounded-2xl overflow-visible hover:border-dragon-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-dragon-500/5"
+              style={{ perspective: '1000px' }}
+            >
+              {/* Image with float animation */}
+              {product.image && (
+                <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-44 h-44 z-20" style={{ transform: 'translateX(-50%) translateY(0)' }}>
+                  <div className="animate-float-img w-full h-full">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain drop-shadow-2xl"
+                      style={{
+                        filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.5))',
+                      }}
+                    />
                   </div>
                 </div>
               )}
 
-              <div className="px-5 py-4 border-t border-dark-600/20 flex items-center justify-between">
-                <span className="text-xl font-black text-white">
-                  ${product.proteinOptions ? product.proteinOptions[0].price : product.sizes ? product.sizes[0].price : product.price}
-                </span>
-                <button
-                  onClick={() => handleAdd(product)}
-                  className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-dragon-500/30 transition-all hover:scale-105 active:scale-95"
-                >
-                  <ShoppingCart size={14} />
-                  Agregar
-                </button>
+              {/* Card content */}
+              <div className={`pt-5 ${product.image ? 'pt-20' : ''}`}>
+                <div className="p-5 pb-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <h4 className="text-base font-bold text-white leading-tight">{product.name}</h4>
+                    {product.price === 0 && (
+                      <span className="px-2 py-1 bg-fire-500/20 text-fire-400 text-[10px] font-bold rounded-lg">A COTIZAR</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-dark-400 mt-2 line-clamp-2">{product.description}</p>
+                </div>
+
+                {(product.proteinOptions || product.sizes) && (
+                  <div className="px-5 pb-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {(product.proteinOptions || product.sizes || []).map((opt: any, i: number) => (
+                        <button
+                          key={i}
+                          onClick={() => {}}
+                          className="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-dark-700/50 text-dark-400 border border-dark-600/20 hover:border-dark-500/40"
+                        >
+                          {opt.label} ${opt.price}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className="px-5 py-4 border-t border-dark-600/20 flex items-center justify-between">
+                  <span className="text-xl font-black text-white">
+                    ${product.proteinOptions ? product.proteinOptions[0].price : product.sizes ? product.sizes[0].price : product.price}
+                  </span>
+                  <button
+                    onClick={() => handleAdd(product)}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-dragon-500/30 transition-all hover:scale-105 active:scale-95"
+                  >
+                    <ShoppingCart size={14} />
+                    Agregar
+                  </button>
+                </div>
               </div>
             </div>
           ))}

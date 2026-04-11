@@ -322,6 +322,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha (yakimeshi o gohan a elegir)',
     price: 85,
     category: 'tepanyaki',
+    image: '/platillos/tempayaki_vegano.png',
     sizes: [
       { label: 'Medio', price: 85 },
       { label: 'Completo', price: 95 },
