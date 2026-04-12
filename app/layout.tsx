@@ -13,9 +13,11 @@ export const metadata: Metadata = {
   title: "Akemi Sushi - Sushi, Ramen & Tepanyaki Premium",
   description:
     "El mejor sushi, ramen y tepanyaki de la ciudad. Ingredientes frescos, sabores auténticos.",
+  metadataBase: new URL("https://sushirestaurant-psi.vercel.app"),
   openGraph: {
     title: "Akemi Sushi",
     description: "Sushi, ramen y tepanyaki con ingredientes frescos y sabores auténticos.",
+    url: "https://sushirestaurant-psi.vercel.app",
     locale: "es_MX",
     type: "website",
     images: [
@@ -26,6 +28,7 @@ export const metadata: Metadata = {
         alt: "Akemi Sushi - Sushi, Ramen & Tepanyaki Premium",
       },
     ],
+    siteName: "Akemi Sushi",
   },
   twitter: {
     card: "summary_large_image",
