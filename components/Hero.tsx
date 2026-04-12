@@ -1,3 +1,5 @@
+import { Soup, ChefHat, UtensilsCrossed, Package, Phone, Star } from "lucide-react";
+
 export default function Hero() {
   return (
     <section id="home" className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900">
@@ -10,13 +12,23 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating */}
+      {/* Floating Icons */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <span className="float-slow absolute top-[15%] left-[8%] text-5xl opacity-15">🍣</span>
-        <span className="float-fast absolute top-[25%] right-[12%] text-4xl opacity-15"></span>
-        <span className="float-slow absolute bottom-[20%] left-[15%] text-5xl opacity-10">🍜</span>
-        <span className="float-fast absolute top-[55%] right-[20%] text-4xl opacity-10">🥢</span>
-        <span className="float-slow absolute bottom-[10%] right-[8%] text-5xl opacity-15">🍱</span>
+        <span className="float-slow absolute top-[15%] left-[8%] opacity-15">
+          <Soup className="w-14 h-14 text-red-400" strokeWidth={1.5} />
+        </span>
+        <span className="float-fast absolute top-[25%] right-[12%] opacity-15">
+          <ChefHat className="w-12 h-12 text-teal-400" strokeWidth={1.5} />
+        </span>
+        <span className="float-slow absolute bottom-[20%] left-[15%] opacity-10">
+          <Soup className="w-14 h-14 text-yellow-400" strokeWidth={1.5} />
+        </span>
+        <span className="float-fast absolute top-[55%] right-[20%] opacity-10">
+          <UtensilsCrossed className="w-12 h-12 text-amber-600" strokeWidth={1.5} />
+        </span>
+        <span className="float-slow absolute bottom-[10%] right-[8%] opacity-15">
+          <Package className="w-14 h-14 text-green-400" strokeWidth={1.5} />
+        </span>
       </div>
 
       {/* Glow */}
@@ -48,17 +60,19 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta flex flex-col sm:flex-row justify-center gap-4">
-          <button onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-4 bg-gradient-to-r from-dragon-500 to-dragon-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-dragon-500/25 hover:shadow-dragon-500/40 transition-all duration-300 hover:scale-105">
-            Ver Menú 🍣
+          <button onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })} className="px-8 py-4 bg-gradient-to-r from-dragon-500/50 to-dragon-600/50 text-white rounded-xl font-bold text-lg shadow-lg shadow-dragon-500/25 hover:shadow-dragon-500/40 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+            Ver Menú
+            <Soup className="w-6 h-6 text-teal-300" strokeWidth={2} />
           </button>
-          <a href="tel:3313262108" className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white rounded-xl font-bold text-lg border border-dark-500/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
-            📞 Llamar Ahora
+          <a href="tel:3313262108" className="px-8 py-4 bg-linear from-gray-100/50 bg-gray-200/50 backdrop-blur-sm text-white rounded-xl font-bold text-lg border border-dark-500/30 hover:bg-white/40 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+            <Phone className="w-6 h-6 text-teal-400" strokeWidth={2} />
+            Llamar Ahora
           </a>
         </div>
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
-          {[{ value: '80+', label: 'Productos' }, { value: '100%', label: 'Fresco' }, { value: '⭐', label: 'Calidad' }].map((stat) => (
+          {[{ value: '80+', label: 'Productos' }, { value: '100%', label: 'Fresco' }, { value: <Star className="w-8 text-yellow-400" strokeWidth={2} fill="currentColor" />, label: 'Calidad' }].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
               <div className="text-xs sm:text-sm text-dark-400 mt-1">{stat.label}</div>

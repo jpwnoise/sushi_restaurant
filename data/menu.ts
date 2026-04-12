@@ -26,6 +26,7 @@ export const menuItems: MenuItem[] = [
     description: 'Alga por centro y ajonjolí',
     price: 65,
     category: 'sushi-clasico',
+    image:'/platillos/sushi_california_3.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 65 },
       { label: 'Camarón', price: 75 },
@@ -38,6 +39,7 @@ export const menuItems: MenuItem[] = [
     description: 'Alga por fuera y ajonjolí',
     price: 65,
     category: 'sushi-clasico',
+    image:'/platillos/sushi_california_alga.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 65 },
       { label: 'Camarón', price: 75 },
@@ -50,6 +52,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki empanizado',
     price: 70,
     category: 'sushi-clasico',
+    image:'/platillos/sushi_california_empanizado.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 70 },
       { label: 'Camarón', price: 75 },
@@ -62,6 +65,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki con queso philadelphia',
     price: 70,
     category: 'sushi-clasico',
+    image:'/platillos/sushi_california_queso_f.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 70 },
       { label: 'Camarón', price: 75 },
@@ -75,6 +79,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki de plátano macho',
     price: 80,
     category: 'sushi-especial',
+    image:'/platillos/sushi_platano.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 80 },
       { label: 'Camarón', price: 90 },
@@ -88,6 +93,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki de plátano macho empanizado',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/sushi_platano_empanizado.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -101,6 +107,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki con tres quesos',
     price: 80,
     category: 'sushi-especial',
+    image:'/platillos/sushi_3_quesos.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 80 },
       { label: 'Camarón', price: 90 },
@@ -114,6 +121,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki con tres quesos empanizado',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/sushi_3_quesos_empanizado.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -127,6 +135,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki con philadelphia y empanizado',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/maki_empanizado.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -140,6 +149,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki de aguacate',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/sushi_avocado.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -153,6 +163,7 @@ export const menuItems: MenuItem[] = [
     description: 'Maki de pepino',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/sushi_pepino.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -166,6 +177,7 @@ export const menuItems: MenuItem[] = [
     description: 'California empanizado',
     price: 85,
     category: 'sushi-especial',
+    image:'/platillos/sushi_california_5.png',
     proteinOptions: [
       { label: 'Vegetariano', price: 85 },
       { label: 'Camarón', price: 95 },
@@ -180,6 +192,7 @@ export const menuItems: MenuItem[] = [
     description: 'Una maki con camarón por dentro, forrado de aguacate, coronado con ensalada de cangrejo y camarones empanizados.',
     price: 135,
     category: 'sushi-golden',
+    image:'/platillos/mazinger.png',
   },
   {
     id: 14,
@@ -187,6 +200,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rollo mitad philadelphia, mitad empanizado de camarón por dentro, coronado con ensalada de cangrejo y camarones empanizados.',
     price: 125,
     category: 'sushi-golden',
+    image:'/platillos/guinza.png',
   },
   {
     id: 15,
@@ -194,6 +208,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki con camarón por dentro, forrado de philadelphia, coronado con ensalada de cangrejo, salsa de anguila y ajonjolí negro.',
     price: 125,
     category: 'sushi-golden',
+    image:'/platillos/kimoono.png',
   },
   {
     id: 16,
@@ -201,6 +216,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki con camarón por dentro, forrado de philadelphia, mitad aguacate, mitad camarón.',
     price: 115,
     category: 'sushi-golden',
+    image:'/platillos/samurai.png',
   },
   {
     id: 17,
@@ -208,6 +224,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rollo empanizado de ajo, relleno de camarón, aderezo de masago, camarones empanizados y salsa anguila.',
     price: 135,
     category: 'sushi-golden',
+    image:'/platillos/furai.png',
   },
   {
     id: 18,
@@ -215,6 +232,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rollo forrado de philadelphia, verduras capeadas, salsa anguila y ajonjolí. Marisco a elegir.',
     price: 115,
     category: 'sushi-golden',
+    image:'/platillos/otoñito.png',
   },
   {
     id: 19,
@@ -222,6 +240,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rollo forrado de philadelphia, salmón, aguacate, coronado con aderezo de masago, camarones empanizados y ajonjolí.',
     price: 145,
     category: 'sushi-golden',
+    image:'/platillos/abosake.png',
   },
   {
     id: 20,
@@ -229,6 +248,7 @@ export const menuItems: MenuItem[] = [
     description: 'Rollo de camarón forrado de philadelphia, aguacate y pulpo, coronado con ensalada y camarón empanizado.',
     price: 130,
     category: 'sushi-golden',
+    image:'/platillos/grenuño.png',
   },
   {
     id: 21,
@@ -236,6 +256,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki con camarón por dentro, 3 piezas de philadelphia, 3 piezas de empanizado, 2 piezas de plátano, 2 piezas de aguacate y 2 piezas de camarón.',
     price: 120,
     category: 'sushi-golden',
+    image:'/platillos/delirio.png',
   },
   {
     id: 22,
@@ -243,6 +264,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki con camarón por dentro, forrado de atún, coronado con ensalada mixta, salsa de anguila, un toque de sirasha y ajonjolí negro.',
     price: 135,
     category: 'sushi-golden',
+    image:'/platillos/tuna.png',
   },
   {
     id: 23,
@@ -250,6 +272,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki forrado de camarón. Super lujo a escoger + $20, coronado con ensalada de cangrejo y camarones empanizados.',
     price: 135,
     category: 'sushi-golden',
+    image:'/platillos/ebi.png',
   },
   {
     id: 24,
@@ -257,6 +280,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un maki con camarón por dentro, forrado de queso philadelphia, queso gouda, queso amarillo, empanizado, coronado con ensalada de cangrejo, salsa de anguila y ajonjolí.',
     price: 125,
     category: 'sushi-golden',
+    image:'/platillos/3q.png',
   },
   {
     id: 25,
@@ -264,6 +288,7 @@ export const menuItems: MenuItem[] = [
     description: 'Delicioso sushi relleno de cangrejo, forrado de aguacate, philadelphia y camarón, coronado con ensalada Tampico, camarón empanizado, masago, salsa de anguila y ajonjolí.',
     price: 135,
     category: 'sushi-golden',
+    image:'/platillos/3x3.png',
   },
   // ==================== RAMEN ====================
   {
@@ -272,6 +297,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, alga, 6 piezas de gyoza, alga, cebollín y champiñón. Incluye naruto.',
     price: 160,
     category: 'ramen',
+    image:'/platillos/ramen_gyoza.png',
   },
   {
     id: 27,
@@ -279,6 +305,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, chuleta ahumada, alga, cebollín y champiñón. Incluye naruto.',
     price: 160,
     category: 'ramen',
+    image:'/platillos/ramen_chuleta.png',
   },
   {
     id: 28,
@@ -286,6 +313,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, camarones, alga, cebollín y champiñón. Incluye naruto.',
     price: 160,
     category: 'ramen',
+    image:'/platillos/ramen_camaron.png',
   },
   {
     id: 29,
@@ -293,6 +321,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, pansita, alga, cebollín, champiñón y verduras. Incluye naruto.',
     price: 190,
     category: 'ramen',
+    image:'/platillos/ramen_shashu.png',
   },
   {
     id: 30,
@@ -300,6 +329,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, pollo, alga, cebollín, champiñón y verduras. Incluye naruto.',
     price: 160,
     category: 'ramen',
+    image:'/platillos/ramen_pollo.png',
   },
   {
     id: 31,
@@ -307,6 +337,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosa pasta acompañada de huevo cocido, pollo, camarón, pansita, alga, cebollín, champiñón y verduras. Incluye naruto.',
     price: 160,
     category: 'ramen',
+    image:'/platillos/ramen_mix.png',
   },
   {
     id: 32,
@@ -314,6 +345,7 @@ export const menuItems: MenuItem[] = [
     description: 'Delicioso caldo acompañado de fideos, camarón, pulpo, cangrejo, atún, coronado con aguacate, trozos de alga y cebollín. Sopa mizo.',
     price: 155,
     category: 'ramen',
+    image:'/platillos/pozole.png',
   },
   // ==================== TEPANYAKI ====================
   {
@@ -322,7 +354,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha (yakimeshi o gohan a elegir)',
     price: 85,
     category: 'tepanyaki',
-    image: '/platillos/tempayaki_vegano.png',
+    image: '/platillos/tempayaki_vegano_4.png',
     sizes: [
       { label: 'Medio', price: 85 },
       { label: 'Completo', price: 95 },
@@ -334,7 +366,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con pollo',
     price: 90,
     category: 'tepanyaki',
-    image: '/platillos/tempayaki_pollo_plancha.png',
+    image: '/platillos/tempayaki_pollo_plancha_2.png',
     sizes: [
       { label: 'Medio', price: 90 },
       { label: 'Completo', price: 120 },
@@ -346,7 +378,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con camarón',
     price: 100,
     category: 'tepanyaki',
-    image: '/platillos/tempayaki_camaron.png',
+    image: '/platillos/tempayaki_camaron_2.png',
     sizes: [
       { label: 'Medio', price: 100 },
       { label: 'Completo', price: 130 },
@@ -358,6 +390,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con pollo y camarón',
     price: 100,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_camaron_pollo_2.png',
     sizes: [
       { label: 'Medio', price: 100 },
       { label: 'Completo', price: 130 },
@@ -369,6 +402,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con pescado empanizado',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_pescado_2.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 135 },
@@ -380,6 +414,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con pollo empanizado',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_pollo_empanizado.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 130 },
@@ -391,6 +426,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con camarón empanizado',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_camaron_empanizado.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 140 },
@@ -402,6 +438,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con atún o salmón',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_atun_salmon.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 155 },
@@ -413,6 +450,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha con arrachera',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_arrachera.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 155 },
@@ -424,6 +462,7 @@ export const menuItems: MenuItem[] = [
     description: '7 verduras a la plancha, mixto especial',
     price: 105,
     category: 'tepanyaki',
+    image:'/platillos/tempayaki_mix.png',
     sizes: [
       { label: 'Medio', price: 105 },
       { label: 'Completo', price: 155 },
@@ -436,6 +475,7 @@ export const menuItems: MenuItem[] = [
     description: 'Pollo a la naranja acompañado con arroz frito, hazlo especial con aguacate y philadelphia.',
     price: 115,
     category: 'platillos',
+    image:'/platillos/pollo_pplancha.png',
   },
   {
     id: 44,
@@ -443,6 +483,7 @@ export const menuItems: MenuItem[] = [
     description: 'Fusión de camarones empanizados, ensalada de surimi, abundante aguacate y philadelphia montado sobre una deliciosa base de arroz blanco, con salsa de anguila, ajonjolí y un toque de sirsha.',
     price: 95,
     category: 'platillos',
+    image:'/platillos/ebi_don.png',
     sizes: [
       { label: 'Chico', price: 95 },
       { label: 'Grande', price: 115 },
@@ -453,6 +494,7 @@ export const menuItems: MenuItem[] = [
     name: 'Caldo Udon',
     description: 'Caldo udon con pollo, camarón o mixto.',
     price: 155,
+    image:'/platillos/caldo_udon.png',
     category: 'platillos',
   },
   {
@@ -461,6 +503,7 @@ export const menuItems: MenuItem[] = [
     description: 'Tepaudon con pollo, camarón o mixto.',
     price: 155,
     category: 'platillos',
+    image:'/platillos/tapaudon.png',
   },
   {
     id: 47,
@@ -468,6 +511,7 @@ export const menuItems: MenuItem[] = [
     description: 'Gohan especial',
     price: 60,
     category: 'platillos',
+    image:'/platillos/gohan.png',
   },
   {
     id: 48,
@@ -475,6 +519,7 @@ export const menuItems: MenuItem[] = [
     description: 'Gohan con pollo o camarón',
     price: 85,
     category: 'platillos',
+    image:'/platillos/gohan_especial.png',
   },
   {
     id: 49,
@@ -482,6 +527,7 @@ export const menuItems: MenuItem[] = [
     description: 'Gohan especial con pollo o camarón',
     price: 95,
     category: 'platillos',
+    image:'/platillos/gohan_mixto.png',
   },
   {
     id: 50,
@@ -489,6 +535,7 @@ export const menuItems: MenuItem[] = [
     description: 'Gohan con camarón empanizado',
     price: 100,
     category: 'platillos',
+    image:'/platillos/gohan_camaron_empanizado.png',
   },
   {
     id: 51,
@@ -496,6 +543,7 @@ export const menuItems: MenuItem[] = [
     description: 'Gohan con arrachera o mixtote',
     price: 100,
     category: 'platillos',
+    image:'/platillos/gohan_arrachera.png',
   },
   {
     id: 52,
@@ -503,6 +551,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi especial',
     price: 70,
     category: 'platillos',
+    image:'/platillos/yakimeshi_especial.png',
   },
   {
     id: 53,
@@ -510,6 +559,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi con pollo o camarón',
     price: 85,
     category: 'platillos',
+    image:'/platillos/yaki_pollo_cam.png',
   },
   {
     id: 54,
@@ -517,6 +567,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi especial con pollo o camarón',
     price: 95,
     category: 'platillos',
+    image:'/platillos/yakimeshi_plancha.png',
   },
   {
     id: 55,
@@ -524,6 +575,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi con camarón empanizado',
     price: 100,
     category: 'platillos',
+    image:'/platillos/yakimeshi_empanizado.png',
   },
   {
     id: 56,
@@ -531,6 +583,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi con arrachera o mixtote',
     price: 105,
     category: 'platillos',
+    image:'/platillos/yaki_arra.png',
   },
   {
     id: 57,
@@ -538,6 +591,7 @@ export const menuItems: MenuItem[] = [
     description: 'Yakimeshi imperial',
     price: 135,
     category: 'platillos',
+    image:'/platillos/yaki_imperial.png',
   },
   {
     id: 58,
@@ -545,6 +599,7 @@ export const menuItems: MenuItem[] = [
     description: 'Harumeshi pack de verduras',
     price: 90,
     category: 'platillos',
+    image:'/platillos/harumeshi.png',
   },
   {
     id: 59,
@@ -552,6 +607,7 @@ export const menuItems: MenuItem[] = [
     description: 'Harumeshi pack de camarón y queso',
     price: 100,
     category: 'platillos',
+    image:'/platillos/harumeshi_cam.png',
   },
   {
     id: 60,
@@ -559,6 +615,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de filete de pescado o pollo empanizado.',
     price: 100,
     category: 'platillos',
+    image:'/platillos/filete_pollo.png',
     sizes: [
       { label: 'Sencillo', price: 100 },
       { label: 'Especial', price: 110 },
@@ -570,6 +627,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosas verduras finamente cortadas, capeadas, acompañadas de camarón o pollo.',
     price: 145,
     category: 'platillos',
+    image:'/platillos/tempura.png',
   },
   {
     id: 62,
@@ -577,6 +635,7 @@ export const menuItems: MenuItem[] = [
     description: 'Deliciosas empanadas rellenas de carne de cerdo, fritas en aceite.',
     price: 85,
     category: 'platillos',
+    image:'/platillos/gyozas.png',
   },
   // ==================== COMBOS ====================
   {
@@ -585,6 +644,7 @@ export const menuItems: MenuItem[] = [
     description: 'Medio sushi de camarón, con philadelphia o empanizado, más medio yakimeshi.',
     price: 70,
     category: 'combos',
+    image:'/platillos/sushi_yaki.png',
   },
   {
     id: 64,
@@ -592,6 +652,7 @@ export const menuItems: MenuItem[] = [
     description: 'Medio sushi de camarón, con philadelphia o empanizado, más medio yakimeshi.',
     price: 75,
     category: 'combos',
+    image:'/platillos/combo.png',
   },
   {
     id: 65,
@@ -599,6 +660,7 @@ export const menuItems: MenuItem[] = [
     description: 'Medio sushi de camarón, con philadelphia o empanizado, más medio yakimeshi.',
     price: 80,
     category: 'combos',
+    image:'/platillos/lujo.png',
   },
   {
     id: 66,
@@ -606,6 +668,7 @@ export const menuItems: MenuItem[] = [
     description: 'Un yakimeshi especial más un harumaki con queso y una brocheta a elegir.',
     price: 100,
     category: 'combos',
+    image:'/platillos/combo-2.png',
   },
   // ==================== BROCHETAS ====================
   {
@@ -614,6 +677,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de dos brochetas de camarón y queso.',
     price: 50,
     category: 'brochetas',
+    image:'/platillos/camaron_gratinado.png',
   },
   {
     id: 68,
@@ -621,6 +685,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de dos brochetas de plátano y queso.',
     price: 45,
     category: 'brochetas',
+    image:'/platillos/platano_queso.png',
   },
   {
     id: 69,
@@ -628,6 +693,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de dos brochetas de philadelphia.',
     price: 50,
     category: 'brochetas',
+    image:'/platillos/yaki_broche.png',
   },
   {
     id: 70,
@@ -635,6 +701,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de dos brochetas de queso.',
     price: 50,
     category: 'brochetas',
+    image:'/platillos/brochetas_queso.png',
   },
   {
     id: 71,
@@ -642,6 +709,7 @@ export const menuItems: MenuItem[] = [
     description: 'Arroz frito acompañado de dos brochetas de philadelphia y camarón.',
     price: 55,
     category: 'brochetas',
+    image:'/platillos/queso_camaron.png',
   },
   {
     id: 72,
@@ -664,6 +732,7 @@ export const menuItems: MenuItem[] = [
     description: 'Uelitas rellenas de pepino, aguacate, philadelphia y proteína a elegir.',
     price: 85,
     category: 'extras',
+    image:'/platillos/dragon.png',
   },
   {
     id: 75,
@@ -671,6 +740,7 @@ export const menuItems: MenuItem[] = [
     description: 'Bola de arroz rellena philadelphia, cubierta de camarón, aguacate, pepino, ensalada y camarón empanizado.',
     price: 105,
     category: 'extras',
+    image:'/platillos/yaket.png',
   },
   {
     id: 76,
@@ -678,6 +748,7 @@ export const menuItems: MenuItem[] = [
     description: 'Bola de arroz rellena de aguacate, philadelphia, pepino y marisco a elegir con camarón.',
     price: 95,
     category: 'extras',
+    image:'/platillos/yaket_camaron.png',
   },
   {
     id: 77,
@@ -685,6 +756,7 @@ export const menuItems: MenuItem[] = [
     description: 'Bola de arroz rellena de aguacate, philadelphia, pepino y marisco a elegir con cangrejo.',
     price: 85,
     category: 'extras',
+    image:'/platillos/crangrejo.png',
   },
   {
     id: 78,
@@ -717,15 +789,15 @@ export const menuItems: MenuItem[] = [
 ];
 
 export const categories = [
-  { id: 'sushi-clasico' as const, name: 'Sushi Clásico', icon: '🍣' },
-  { id: 'sushi-especial' as const, name: 'Sushi Especial', icon: '🍣' },
-  { id: 'sushi-golden' as const, name: 'Sushi Golden', icon: '⭐' },
-  { id: 'ramen' as const, name: 'Ramen', icon: '🍜' },
-  { id: 'tepanyaki' as const, name: 'Tepanyaki', icon: '🔥' },
-  { id: 'platillos' as const, name: 'Platillos', icon: '🍱' },
-  { id: 'combos' as const, name: 'Combos', icon: '🎁' },
-  { id: 'brochetas' as const, name: 'Brochetas', icon: '🍢' },
-  { id: 'extras' as const, name: 'Extras', icon: '🥟' },
+  { id: 'sushi-clasico' as const, name: 'Sushi Clásico', icon: 'Salad', color: '#22c55e' },
+  { id: 'sushi-especial' as const, name: 'Sushi Especial', icon: 'Salad', color: '#3b82f6' },
+  { id: 'sushi-golden' as const, name: 'Sushi Golden', icon: 'Crown', color: '#eab308' },
+  { id: 'ramen' as const, name: 'Ramen', icon: 'Coffee', color: '#f97316' },
+  { id: 'tepanyaki' as const, name: 'Tepanyaki', icon: 'Flame', color: '#ef4444' },
+  { id: 'platillos' as const, name: 'Platillos', icon: 'Utensils', color: '#a855f7' },
+  { id: 'combos' as const, name: 'Combos', icon: 'Gift', color: '#ec4899' },
+  { id: 'brochetas' as const, name: 'Brochetas', icon: 'Candy', color: '#14b8a6' },
+  { id: 'extras' as const, name: 'Extras', icon: 'PlusCircle', color: '#06b6d4' },
 ];
 
 export const note = 'Por $20 pesos más, puedes agregar queso gratinado a cualquier sushi. Por $10 más hacemos tu orden especial con aguacate, philadelphia, salsa de anguila o ajonjolí.';

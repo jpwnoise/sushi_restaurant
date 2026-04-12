@@ -25,12 +25,6 @@ export function useGSAP() {
         });
       });
 
-      // Menu cards
-      gsap.from('.menu-card', {
-        opacity: 0, y: 40, scale: 0.97, stagger: { amount: 0.6, from: 'start' }, duration: 0.5,
-        scrollTrigger: { trigger: '.menu-grid', start: 'top 75%' },
-      });
-
       // Floating elements
       gsap.to('.float-slow', { y: 15, duration: 5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
       gsap.to('.float-fast', { y: 12, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
