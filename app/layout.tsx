@@ -18,6 +18,20 @@ export const metadata: Metadata = {
     description: "Sushi, ramen y tepanyaki con ingredientes frescos y sabores auténticos.",
     locale: "es_MX",
     type: "website",
+    images: [
+      {
+        url: "/platillos/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Akemi Sushi - Sushi, Ramen & Tepanyaki Premium",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akemi Sushi",
+    description: "Sushi, ramen y tepanyaki con ingredientes frescos y sabores auténticos.",
+    images: ["/platillos/og-image.png"],
   },
 };
 
