@@ -275,12 +275,12 @@ export default function Menu() {
         </div>
 
         {/* Category tabs */}
-        <div className="flex gap-2 mb-10 overflow-x-auto pb-4 scrollbar-hide">
+        <div className="category-scroll flex gap-2 mb-10 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-4 scroll-smooth snap-x snap-mandatory">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 whitespace-nowrap ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg sm:rounded-xl text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap snap-start shrink-0 ${
                 activeCategory === cat.id
                   ? 'bg-gradient-to-r from-dragon-500 to-dragon-600 text-white shadow-lg shadow-dragon-500/25'
                   : 'bg-dark-700/50 text-dark-300 border border-dark-600/30 hover:border-dark-500/50'

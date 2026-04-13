@@ -45,6 +45,15 @@ html {
   background: #616161;
 }
 
+/* Hide scrollbar for category tabs */
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+.category-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
