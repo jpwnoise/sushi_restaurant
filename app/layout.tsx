@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -48,6 +49,12 @@ export default function RootLayout({
       <body className="min-h-screen font-[var(--font-poppins)] bg-[#1a1a1a] text-white">
         {children}
         <Analytics />
+        <Script
+          id="umami-sushi"
+          strategy="afterInteractive"
+          src="https://cloud.umami.is/script.js"
+          data-website-id="2b67eb65-7558-4e3c-80a1-6df52e74f207"
+        />
       </body>
     </html>
   );
